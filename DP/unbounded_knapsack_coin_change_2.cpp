@@ -32,7 +32,7 @@ int main(){
     vector<vector<int>> t(length + 1, vector<int>(amount + 1));
     
     for(int i = 0; i < amount + 1; i++){
-        t[0][i] = INT_MAX;
+        t[0][i] = INT_MAX - 1;
     }
     
     for(int i = 0; i < length + 1; i++){
@@ -44,7 +44,7 @@ int main(){
             t[1][i] = i / coins[0];
         }
         else{
-            t[1][i] = INT_MAX;
+            t[1][i] = INT_MAX - 1;
         }
     }
     
